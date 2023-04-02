@@ -1,0 +1,2 @@
+#!bis/bash
+yes yes
