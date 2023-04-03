@@ -1,33 +1,38 @@
 #include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main(int ac, char **av)
 {
-    int i = 1;
-    int j = 0;
-    int result = 0;
-    if (ac == 2){
+	if (ac == 2)
+	{
+    int i = 0;
+		int result = 0;
+		char *line = "23456789TJDKA";
 
-        while(av[i][j]){
-            if (av[i][j] >= '2' && av[i][j] <= '9')
-            {
-
-                result += 4;
-            }
-            else if (av[i][j] == 'J' || av[i][j] == 'K' || av[i][j] == 'Q')
-            {
-                result += 10;
-            }
-            else if (av[i][j] == 'A'){
-                if (result >= 21)
-                    result += 11;
-                else 
-                    result += 1;
-            }
-            j++;
-        }
-        printf("%d\n", result);
-    }
-    else
-        return 1;
-    return (0);
+		while (av[1][i])
+		{
+			if (strchr(line, av[1][i]) == NULL){
+				printf("Error arg\n");
+        exit(1);
+      }
+			if (av[1][i] == 'A'){
+				if ((result + 11) > 21)
+					result += 1;
+				else
+					result += 11;
+			}
+			else if (strchr("TJDK", av[1][i]) != NULL)
+				result += 10;
+			else
+				result += av[1][i] - '0';
+			i++;
+		}
+		if (result == 21)
+			printf("BlackJack!\n");
+		else
+			printf("%d\n", result);
+	}
+	return 0;
 }
