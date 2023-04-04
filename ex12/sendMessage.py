@@ -8,7 +8,7 @@ from email import encoders
 fromaddr = "skasmi1337@gmail.com"
 toaddr = "saife.tkd@gmail.com"
 subject = "Email with Attachment"
-body = "Please find attached file"
+body = "BODYYY"
 password = "vgefretedcmllqex"
 
 # Create a multipart message
