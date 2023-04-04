@@ -1,12 +1,5 @@
 #include "libc.h"
 
-
-// int		printf(char c)
-// {
-//     write (1, &c, 1);
-//     return (0);
-// }
-
 int		base(int size)
 {
 	int floor, width, floor_step;

@@ -5,11 +5,11 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 # Email details
-fromaddr = "saife.tkd@gmail.com"
+fromaddr = "skasmi1337@gmail.com"
 toaddr = "saife.tkd@gmail.com"
 subject = "Email with Attachment"
 body = "Please find attached file"
-password = "Temporary@1337"
+password = "vgefretedcmllqex"
 
 # Create a multipart message
 msg = MIMEMultipart()
